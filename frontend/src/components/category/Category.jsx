@@ -63,7 +63,7 @@ export const Category = () => {
 
   useEffect(() => {
     const getCat = async () => {
-      const res = await axios.get("http://localhost:3000/category" + search);
+      const res = await axios.get("https://mern-blog-website-l5zm.onrender.com/category" + search);
       setCat(res.data);
     };
     getCat();
