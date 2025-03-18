@@ -9,7 +9,7 @@ export const Card = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("http://localhost:3000/posts"); // Update with your backend URL
+        const response = await fetch("https://mern-blog-website-l5zm.onrender.com/posts"); // Update with your backend URL
         if (!response.ok) {
           throw new Error("Failed to fetch posts");
         }
