@@ -13,7 +13,7 @@ const Register = () => {
     setError(""); // Clear previous error
 
     try {
-      const res = await axios.post("http://localhost:3000/auth/register", {
+      const res = await axios.post("https://mern-blog-website-l5zm.onrender.com/auth/register", {
         username,
         email,
         password,
