@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <header className="header bg-white !shadow-md transition-all duration-300 z-44">
-      <div className="container mx-auto flex justify-between items-center py-6 px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-6 px-6">
         {/* Hamburger Menu (Mobile Only) */}
         <button
           className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"

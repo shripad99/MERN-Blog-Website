@@ -71,7 +71,7 @@ export const Category = () => {
 
   return (
     <section className="mt-10 relative">
-      <div className="container mx-auto">
+      <div className="max-w-7xl mx-auto">
         <Slider {...settings}>
           {category.map((item) => (
             <div key={item.id} className="box p-2">

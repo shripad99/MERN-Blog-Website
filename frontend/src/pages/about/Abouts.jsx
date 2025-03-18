@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <Navbar />
-      <section className='container mx-auto px-5 py-10'>
+      <section className='max-w-7xl mx-auto px-5 py-10'>
         <h1 className='text-3xl font-bold text-center'>About Us</h1>
         <p className='text-left mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum semper mi. Nulla vestibulum rhoncus dui. Fusce tempor tincidunt enim, vitae mattis nibh porttitor quis. Etiam auctor hendrerit diam non tempus. Cras elementum pulvinar viverra. Vivamus egestas auctor lacus nec aliquam. Nunc congue orci diam, quis accumsan dui fringilla a. Curabitur blandit tellus elit, eget maximus sapien posuere sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla diam leo, facilisis ac magna a, hendrerit dignissim nibh.
           Etiam convallis sed felis id posuere. Sed in arcu urna. Fusce felis tellus, tristique at condimentum ac, dapibus ut tortor. Sed id accumsan turpis. Proin auctor leo vitae eros suscipit viverra. Quisque suscipit aliquam pharetra. Sed id lacinia mauris. Donec a molestie tortor, congue egestas neque. Morbi vitae ipsum nec purus sagittis iaculis sit amet id leo. Phasellus condimentum eleifend efficitur. Nulla tristique vulputate feugiat. Suspendisse non tincidunt neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin euismod convallis purus quis fermentum. Quisque cursus, libero non rutrum ultricies, leo erat rutrum eros, ac imperdiet erat urna sed libero. Curabitur vitae eros molestie, consequat est ut, bibendum mi.

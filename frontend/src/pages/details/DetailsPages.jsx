@@ -63,7 +63,7 @@ export const DetailsPages = () => {
       <Navbar />
       {post ? (
         <section className="singlePage flex justify-center items-center">
-          <div className="container">
+          <div className="max-w-7xl mx-auto">
             <div className="left">
               <img src={post.image || "https://via.placeholder.com/500"} alt={post.title} className="rounded" />
             </div>
