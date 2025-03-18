@@ -28,8 +28,8 @@ const Register = () => {
   };
 
   return (
-    <div className="flex items-center justify-center mt-28">
-      <div className="w-96 border rounded bg-white px-7 py-10 drop-shadow-md">
+    <div className="flex items-center justify-center min-h-screen bg-[url(./assets/images/nature.webp)] bg-cover bg-center bg-no-repeat">
+      <div className="w-96 rounded bg-white px-7 py-10 drop-shadow-lg">
         <form onSubmit={handleSignUp}>
           <h4 className="text-2xl mb-7">Sign Up</h4>
           <input
