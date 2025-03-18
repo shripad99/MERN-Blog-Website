@@ -12,7 +12,7 @@ const Login = () => {
       e.preventDefault()
       dispatch({ type: 'LOGINSTART' })
       try {
-        const res = await axios.post('http://localhost:3000/auth/login', {
+        const res = await axios.post('https://mern-blog-website-l5zm.onrender.com/auth/login', {
           username: userRef.current.value,
           password: passRef.current.value,
         })

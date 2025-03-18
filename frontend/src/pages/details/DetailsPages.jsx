@@ -19,7 +19,7 @@ export const DetailsPages = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await axios.get(`http://localhost:3000/posts/${id}`);
+        const res = await axios.get(`https://mern-blog-website-l5zm.onrender.com/posts/${id}`);
         setPost(res.data);
         setUpdatedPost({ title: res.data.title,  description: res.data.description });
       } catch (err) {
@@ -32,7 +32,7 @@ export const DetailsPages = () => {
   // Delete post
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3000/posts/${id}`, {
+      await axios.delete(`https://mern-blog-website-l5zm.onrender.com/posts/${id}`, {
         data: { username: post.username }, // Ensure user authorization
       });
       alert("Post deleted successfully!");
@@ -45,7 +45,7 @@ export const DetailsPages = () => {
   // Update post
   const handleUpdate = async () => {
     try {
-      const res = await axios.put(`http://localhost:3000/posts/${id}`, {
+      const res = await axios.put(`https://mern-blog-website-l5zm.onrender.com/posts/${id}`, {
         username: post.username, // Ensure user authorization
         title: updatedPost.title,
         description: updatedPost.description,
