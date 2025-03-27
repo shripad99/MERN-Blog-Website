@@ -5,6 +5,7 @@ import Navbar from "../header/Navbar";
 import Footer from "../footer/Footer";
 import { Context } from "../../context/Context";
 import "./create.css";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Create = () => {
   const { user } = useContext(Context);
@@ -28,10 +29,13 @@ const Create = () => {
 
     try {
       const res = await axios.post("https://mern-blog-website-l5zm.onrender.com/posts", postData);
-      navigate('/');
+      toast.success("🚀Post created successfully!");
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
     } catch (err) {
       console.error("Error creating post:", err);
-      alert("Failed to create post");
+      toast.error("Failed to create post");
     }
   };
 
@@ -97,6 +101,7 @@ const Create = () => {
           </form>
         </div>
       </section>
+      <ToastContainer />
       <Footer />
     </>
   );

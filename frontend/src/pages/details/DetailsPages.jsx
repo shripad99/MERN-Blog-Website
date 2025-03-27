@@ -7,6 +7,7 @@ import Navbar from "../../components/header/Navbar";
 import Footer from "../../components/footer/Footer";
 import "./details.css";
 import "../../components/header/header.css";
+import { ToastContainer, toast } from 'react-toastify';
 
 export const DetailsPages = () => {
   const { id } = useParams();
@@ -35,8 +36,10 @@ export const DetailsPages = () => {
       await axios.delete(`https://mern-blog-website-l5zm.onrender.com/posts/${id}`, {
         data: { username: post.username }, // Ensure user authorization
       });
-      alert("Post deleted successfully!");
-      navigate("/"); // Redirect to home after deletion
+      toast("🔥Post deleted successfully!");
+      setTimeout(() => {
+        navigate("/"); // Redirect to home after deletion
+      }, 2000);
     } catch (err) {
       console.error("Error deleting post:", err);
     }
@@ -52,7 +55,7 @@ export const DetailsPages = () => {
       });
       setPost(res.data);
       setIsEditing(false);
-      alert("Post updated successfully!");
+      toast("🔥Post updated successfully!");
     } catch (err) {
       console.error("Error updating post:", err);
     }
@@ -114,7 +117,7 @@ export const DetailsPages = () => {
           </div>
         </div>
       )}
-
+      <ToastContainer />
       <Footer />
     </>
   );

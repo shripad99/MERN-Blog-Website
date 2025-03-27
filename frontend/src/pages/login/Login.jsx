@@ -2,6 +2,7 @@ import React, { useRef, useContext } from 'react'
 import axios from 'axios';
 import { Link } from "react-router-dom"
 import { Context } from '../../context/Context';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
     const userRef = useRef();
@@ -17,10 +18,14 @@ const Login = () => {
           password: passRef.current.value,
         })
         dispatch({ type: 'LOGINSUCC', payload: res.data})
+        toast.success("Login Successfull");
+        setTimeout(() => {
+          window.location.replace("/");
+        }, 2000);
       }catch(err){
         dispatch({ type: 'LOGINFAILED' })
+        toast.error("Login Failed")
       }
-      window.location.replace("/")
     }
     console.log(FetchData);
   return (
@@ -42,6 +47,7 @@ const Login = () => {
             </p>
           </form>
         </div>
+        <ToastContainer />
       </div>
   )
 }
