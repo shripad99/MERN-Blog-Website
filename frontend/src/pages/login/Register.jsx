@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6"
 
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const [isShowPassword, setIsShowPassword] = useState(false);
+  
+  const toggleShowPassword = () =>{
+      setIsShowPassword(!isShowPassword);
+  }
 
   const handleSignUp = async (e) => {
     e.preventDefault(); // Prevent page refresh
@@ -53,14 +60,10 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full text-sm bg-transparent border-[1.5px] px-5 py-3 rounded mb-4 outline-none"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+          <div className='flex items-center bg-transparent border-[1.5px] px-5 rounded mb-4'>
+            <input type={isShowPassword ? "text": "password"} placeholder="Password" onChange={(e) => setPassword(e.target.value)} className='w-full text-sm  bg-transparent py-3 mr-3 rounded outline-none' value={password} required/>
+            {isShowPassword ? <FaRegEye size={22} className='cursor-pointer text-gray-500' onClick={() => toggleShowPassword()}/> : <FaRegEyeSlash  size={22} className='text-slate-400 cursor-pointer' onClick={() => toggleShowPassword()}/>}
+          </div>
           {error && <p className="text-red-500 text-xs pb-1">{error}</p>}
           <button
             type="submit"
