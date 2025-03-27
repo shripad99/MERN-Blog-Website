@@ -30,7 +30,7 @@ const Register = () => {
       if (res.data) {
         toast("🚀 Account created successfully!");
         setTimeout(() => {
-          window.location.replace("/login"); // Redirect to login page on successful registration
+          window.location.replace("/"); // Redirect to login page on successful registration
         }, 2000);
       }
     } catch (err) {
